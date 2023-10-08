@@ -69,7 +69,9 @@ Considering all these factors, it is possible to build the application with this
 flutter build
 ```
 
-## Specific warnings
+## Specific considerations
+
+### MacOS
 
 If you are working on macOS, make sure that internet access through the application is enabled in your settings. As described in [this article](https://docs.flutter.dev/platform-integration/macos/building#setting-up-entitlements), you can do this by displaying the [app/macos](app/macos) folder in [.vscode/settings.json](.vscode/settings.json) and editing the following files:
 
@@ -97,11 +99,15 @@ in both of which the following guidelines should be present:
 <true/>
 ```
 
+### Windows
+
+If you want to create a complete setup for Windows, install the tool [Inno Setup](https://jrsoftware.org/isinfo.php) on your computer, and run a script following the [scripts/make_windows_installer.iss](scripts/make_windows_installer.iss) model, in which simply replace the `ProjectRoot` pre-definition.
+
 ## Headless mode
 
 Due to compatibility issues with simple or legacy systems that do not support Flutter's graphical interface applications, this software also provides a headless mode, based on [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface), specifically for the **server** case.
 
-This mode can be configured by opening the [app](app) folder of the source code in your terminal with the command:
+This setup can be configured by opening the [app](app) folder in the source code, removing all Flutter-related dependencies from the [app/pubspec.yaml](app/pubspec.yaml) file, and then running the command:
 
 ```shell
 dart pub get

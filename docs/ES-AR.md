@@ -71,6 +71,8 @@ flutter build
 
 ## Avisos específicos
 
+### MacOS
+
 Si está trabajando en macOS, asegúrese de que el acceso a Internet a través de la aplicación esté habilitado en su configuración. Como se describe en [este artículo](https://docs.flutter.dev/platform-integration/macos/building#setting-up-entitlements), puede hacerlo mostrando la carpeta [app/macos](../app/macos) en [.vscode/settings.json](.vscode/settings.json) y editando los siguientes archivos:
 
 - [app/macos/Runner/DebugProfile.entitlements](../app/macos/Runner/DebugProfile.entitlements)
@@ -97,11 +99,15 @@ en ambos casos, las siguientes directrices deben estar presentes:
 <true/>
 ```
 
+### Windows
+
+Si deseas crear una configuración completa para Windows, instala la herramienta [Inno Setup](https://jrsoftware.org/isinfo.php) en tu computadora y ejecuta un script siguiendo el modelo [scripts/make_windows_installer.iss](../scripts/make_windows_installer.iss), en el cual simplemente reemplaza la predefinición `ProjectRoot`.
+
 ## Modo headless
 
 Debido a problemas de compatibilidad con sistemas simples o heredados que no admiten aplicaciones con la interfaz gráfica de Flutter, este software también proporciona un modo headless, basado en [línea de comandos](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos), específicamente para el caso del **servidor**.
 
-Este modo se puede configurar abriendo la carpeta [app](../app) del código fuente en su terminal, con el comando:
+Esta configuración se puede realizar abriendo la carpeta [app](../app) en el código fuente, eliminando todas las dependencias relacionadas con Flutter del archivo [app/pubspec.yaml](../app/pubspec.yaml) y luego ejecutando el comando:
 
 ```shell
 dart pub get

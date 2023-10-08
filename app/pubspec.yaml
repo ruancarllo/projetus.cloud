@@ -1,0 +1,36 @@
+name: projetus_cloud
+description: A self-hosted cloud provider for server and client
+
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  encrypt: ^5.0.0
+  file_picker: ^5.5.0
+  shared_preferences: ^2.2.0
+  rename: ^3.0.0
+  flutter_launcher_icons: ^0.13.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/full.png
+    - assets/icons/minimal.png
+
+flutter_launcher_icons:
+  image_path: assets/icons/minimal.png
+  macos:
+    generate: true
+  windows:
+    generate: true

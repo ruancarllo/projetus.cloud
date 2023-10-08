@@ -1,0 +1,25 @@
+# Dart and Flutter versioning files
+**/.dart*
+**/.flutter*
+**/pubspec.lock
+
+# Platform-specific files
+app/build
+app/linux
+app/macos
+app/windows
+
+# Unecessary files
+app/.idea
+app/.metadata
+app/.gitignore
+
+app/test
+app/app.iml
+app/README.md
+
+# Trash files
+**/.DS_Store
+
+# Configuration files
+**/settings.pcc

@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    "**/.dart*": true,
+    "**/.flutter*": true,
+    "**/pubspec.lock": true,
+
+    "app/build": false,
+    "app/linux": false,
+    "app/macos": false,
+    "app/windows": false,
+
+    "app/.idea": true,
+    "app/.metadata": true,
+    "app/.gitignore": true,
+
+    "app/test": false,
+    "app/app.iml": true,
+    "app/README.md": true,
+
+    "**/.DS_Store": true
+  },
+}
